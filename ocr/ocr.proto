@@ -1,0 +1,16 @@
+syntax = "proto3";
+option go_package = "github.com/ocr-grpc-server/ocr";
+service OcrServer {
+  // Sends a greeting
+  rpc Getcaptcha (ImageBuffer) returns (Captcha) {}
+}
+
+// The request message containing the user's name.
+message ImageBuffer {
+  bytes image = 1;
+}
+
+// The response message containing the greetings
+message Captcha {
+  string data = 1;
+}

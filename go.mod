@@ -1,4 +1,4 @@
-module github.com/ocr-grpc-server
+module github.com/fffbbbbbb/ocr-grpc-server
 
 go 1.15
 

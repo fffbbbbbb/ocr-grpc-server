@@ -22,6 +22,7 @@ type server struct {
 }
 
 func (s *server) Getcaptcha(ctx context.Context, in *pb.ImageBuffer) (*pb.Captcha, error) {
+	1
 	image := in.GetImage()
 	data, err := getcaptch(&image)
 	if err != nil {

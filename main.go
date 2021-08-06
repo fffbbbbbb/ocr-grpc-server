@@ -17,13 +17,11 @@ const (
 	port = ":50051"
 )
 
-// server is used to implement helloworld.GreeterServer.
 type server struct {
 	pb.UnimplementedOcrServerServer
 }
 
-// SayHello implements helloworld.GreeterServer
-func (s *server) Getcaptcha(ctx context.Context, in *pb.ImageBuffer) (*pb.Captcha, error) {
+func (s *server) Getcaptcha(in *pb.ImageBuffer) (*pb.Captcha, error) {
 	image := in.GetImage()
 	data, err := getcaptch(&image)
 	if err != nil {
